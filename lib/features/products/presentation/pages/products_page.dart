@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:open_store/features/products/presentation/provider/product_providers.dart';
+import 'package:open_store/features/products/presentation/widgets/product_card.dart';
 
 class ProductsPage extends ConsumerWidget {
   const ProductsPage({super.key});
@@ -22,34 +23,9 @@ class ProductsPage extends ConsumerWidget {
             ),
             itemBuilder: (context, index) {
               final product = products[index];
-              return Card(
-                elevation: 2,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Expanded(
-                      child: Image.network(
-                        product.image,
-                        fit: BoxFit.contain,
-                        width: double.infinity,
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        product.title,
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 8),
-                      child: Text("\$${product.price} (${product.rating.rate}) ${product.rating.count} reviews"),
-                    ),
-                  ],
-                ),
-              );
+              return ProductCard(product: product, onTab: () {
+                print("Item ${product.title} has clicked!");
+              },);
             },
           );
         },
