@@ -1,0 +1,13 @@
+{
+  "appTitle": "OpenStore",
+  "home": "Home",
+  "cart": "Cart",
+  "settings": "Settings",
+  "darkMode": "Dark Mode",
+  "language": "Language",
+  "addToCart": "Add to Cart",
+  "removeFromCart": "Remove",
+  "cart_is_empty": "Your Cart Is Empty!",
+  "checkout_now": "Checkout Now!",
+  "total": "total"
+}

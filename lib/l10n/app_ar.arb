@@ -1,0 +1,13 @@
+{
+  "appTitle": "متجرنا",
+  "home": "الرئيسية",
+  "cart": "سلة المشتريات",
+  "settings": "الإعدادات",
+  "darkMode": "الوضع الداكن",
+  "language": "اللغة",
+  "addToCart": "أضف للسلة",
+  "removeFromCart": "إزالة",
+  "cart_is_empty": "السلة فارغة",
+  "checkout_now": "انتقل الى الدفع",
+  "total": "الاجمالي"
+}
