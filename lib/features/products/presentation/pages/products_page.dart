@@ -7,7 +7,6 @@ import 'package:open_store/features/products/presentation/widgets/product_card.d
 
 import '../../../../l10n/app_localizations.dart';
 
-
 class ProductsPage extends ConsumerWidget {
   const ProductsPage({super.key});
 

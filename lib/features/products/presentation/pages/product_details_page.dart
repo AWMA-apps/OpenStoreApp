@@ -22,7 +22,6 @@ class ProductDetailsPage extends ConsumerWidget {
             pinned: true,
             flexibleSpace: FlexibleSpaceBar(
               background: Container(
-                color: Colors.white,
                 padding: EdgeInsets.all(20),
                 child: Hero(
                   tag: product.id,
@@ -38,7 +37,6 @@ class ProductDetailsPage extends ConsumerWidget {
             child: Container(
               padding: const EdgeInsets.all(20),
               decoration: const BoxDecoration(
-                color: Colors.white,
                 borderRadius: BorderRadius.vertical(top: Radius.circular(30)),
               ),
               child: Column(
@@ -90,12 +88,10 @@ class ProductDetailsPage extends ConsumerWidget {
             ),
           ),
         ],
-
       ),
       bottomNavigationBar: Container(
         padding: const EdgeInsets.all(20),
         decoration: BoxDecoration(
-          color: Colors.white,
           boxShadow: [
             BoxShadow(
               color: Colors.black.withOpacity(0.05),
@@ -119,10 +115,14 @@ class ProductDetailsPage extends ConsumerWidget {
             }
           },
           style: ElevatedButton.styleFrom(
-            backgroundColor: isAdded ? Colors.red : Theme.of(context).primaryColor,
+            backgroundColor: isAdded
+                ? Colors.red
+                : Theme.of(context).primaryColor,
             foregroundColor: Colors.white,
             padding: const EdgeInsets.symmetric(vertical: 15),
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15),
+            ),
           ),
           child: Text(
             isAdded ? 'Remove from Cart' : 'Add to Cart',
@@ -131,6 +131,5 @@ class ProductDetailsPage extends ConsumerWidget {
         ),
       ),
     );
-
   }
 }

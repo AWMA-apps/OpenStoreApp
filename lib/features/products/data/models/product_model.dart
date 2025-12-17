@@ -23,18 +23,15 @@ class ProductModel extends Product {
     );
   }
 
-  Map<String,dynamic> toJSON(){
+  Map<String, dynamic> toJSON() {
     return {
-      'id':id,
-      'title':title,
+      'id': id,
+      'title': title,
       'price': price,
       'description': description,
       'category': category,
       'image': image,
-      'rating':{
-        'rate':rating.rate,
-        'count':rating.count
-      }
+      'rating': {'rate': rating.rate, 'count': rating.count},
     };
   }
 }

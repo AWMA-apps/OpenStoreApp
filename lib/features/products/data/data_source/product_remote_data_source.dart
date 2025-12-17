@@ -22,7 +22,7 @@ class ProductRemoteDataSourceImpl extends ProductRemoteDataSource {
         throw UnimplementedError();
       }
     } catch (e) {
-    rethrow;
-  }
+      rethrow;
+    }
   }
 }

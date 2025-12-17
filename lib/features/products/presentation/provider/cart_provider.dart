@@ -8,13 +8,12 @@ final sharedPreferencesProvider = Provider<SharedPreferences>((ref) {
 });
 
 final cartLocalDataSourceProvider = Provider<CartLocalDataSource>((ref) {
-  final prefs=ref.watch(sharedPreferencesProvider);
+  final prefs = ref.watch(sharedPreferencesProvider);
   return CartLocalDataSource(prefs);
 });
 
 class CartNotifier extends Notifier<List<Product>> {
   late CartLocalDataSource _cartLocalDataSource;
-
 
   @override
   List<Product> build() {
@@ -36,7 +35,7 @@ class CartNotifier extends Notifier<List<Product>> {
     return state.contains(product);
   }
 
-  void _saveCart(List<Product> products){
+  void _saveCart(List<Product> products) {
     _cartLocalDataSource.saveCart(products);
   }
 }

@@ -30,11 +30,13 @@ class SettingsPage extends ConsumerWidget {
             ),
           ),
           const Divider(),
-          SwitchListTile(value: themeMode==ThemeMode.dark,
+          SwitchListTile(
+            value: themeMode == ThemeMode.dark,
             title: Text(tr.darkMode),
             onChanged: (value) {
-            ref.read(themeProvider.notifier).toggleTheme(value);
-          },)
+              ref.read(themeProvider.notifier).toggleTheme(value);
+            },
+          ),
         ],
       ),
     );
